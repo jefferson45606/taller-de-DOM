@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio de DOM (acceder a elementos)</title>
+    <style>
+        .text {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio con document.getElementsByClassName</h1>
+
+    <p class="text">Este es el párrafo 1.</p>
+    <p class="text">Este es el párrafo 2.</p>
+    <p class="text">Este es el párrafo 3.</p>
+
+    <button id="styleButton">Cambiar Estilo</button>
+    <script>
+    const paragraphs = document.getElementsByClassName("text");
+    const button = document.getElementById("styleButton");
+
+
+    button.addEventListener("click", () => {
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.backgroundColor = "#f0f8ff"; 
+        paragraphs[i].style.color = "#333";            
+        paragraphs[i].style.fontWeight = "bold";     
+    }
+    });
+
+    </script>
+</body>
+</html>

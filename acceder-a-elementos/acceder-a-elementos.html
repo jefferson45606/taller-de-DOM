@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de DOM (acceder a elementos)</title>
+  <style>
+    #text {
+      font-size: 18px;
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ejercicio con "document.getElementById"</h1>
+  <p id="text">Este texto cambiará de color al presionar el botón.</p>
+  <button id="colorButton">Cambiar Color</button>
+
+  <script>
+    const button = document.getElementById("colorButton");
+    const text = document.getElementById("text");
+
+    button.addEventListener("click", () => {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+    text.style.color = randomColor;
+    });
+  </script>
+</body>
+</html>

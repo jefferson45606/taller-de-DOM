@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con textContent</title>
+  <style>
+    #message {
+      font-size: 18px;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejercicio con textContent</h1>
+  <p id="message">texto a reemplazr.</p>
+  <button id="changeTextButton">Cambiar Texto</button>
+
+  <script>
+    const message = document.getElementById("message");
+    const button = document.getElementById("changeTextButton");
+
+    button.addEventListener("click", () => {
+    message.textContent = "texto actualizado";
+    
+    message.style.backgroundColor = "#ffebcd"; 
+    message.style.color = "#000"; 
+    message.style.fontStyle = "italic";
+    });
+
+  </script>
+</body>
+</html>

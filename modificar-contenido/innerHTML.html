@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con innerHTML</title>
+  <style>
+    #content {
+      font-size: 18px;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio con innerHTML</h1>
+  <div id="content">
+    <p>contenido inicial.</p>
+  </div>
+  <button id="updateButton">Actualizar Contenido</button>
+
+  <script>
+    const contentDiv = document.getElementById("content");
+    const updateButton = document.getElementById("updateButton");
+
+    updateButton.addEventListener("click", () => {
+    contentDiv.innerHTML = `
+        <h2>Nuevo contenido</h2>
+        <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        </ul>
+    `;
+
+    contentDiv.style.backgroundColor = "#e3f2fd"; 
+    contentDiv.style.color = "#333"; 
+    });
+
+  </script>
+</body>
+</html>

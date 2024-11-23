@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo con classList.add</title>
+  <style>
+    /* Estilo base del cuadro */
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+      border: 2px solid #ccc;
+      margin: 20px auto;
+      transition: all 0.5s ease;
+    }
+    /* Clase que se agregará dinámicamente */
+    .blueBox {
+      background-color: lightblue;
+      border-color: blue;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejemplo con classList.add</h1>
+  <div id="box">Cuadro inicial</div>
+  <button id="addClassButton">Cambiar estilo</button>
+
+  <script>
+    const box = document.getElementById("box");
+    const addClassButton = document.getElementById("addClassButton");
+
+
+    addClassButton.addEventListener("click", () => {
+    box.classList.add("blueBox"); 
+    box.textContent = "Estilo cambiado"; 
+    });
+
+  </script>
+</body>
+</html>

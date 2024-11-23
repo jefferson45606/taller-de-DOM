@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con document.getElementsByTagName</title>
+  <style>
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ejercicio con document.getElementsByTagName</h1>
+  
+  <p>Este es el párrafo 1.</p>
+  <p>Este es el párrafo 2.</p>
+  <p>Este es el párrafo 3.</p>
+  
+  <button id="updateButton">Actualizar Contenido</button>
+  
+  <script>
+    const paragraphs = document.getElementsByTagName("p");
+    const button = document.getElementById("updateButton");
+
+    button.addEventListener("click", () => {
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].textContent = `Este es el nuevo contenido del párrafo ${i + 1}`;
+        paragraphs[i].style.backgroundColor = "#d1f7c4"; 
+        paragraphs[i].style.color = "#000";             
+        paragraphs[i].style.fontStyle = "italic";       
+    }
+    });
+
+  </script>
+</body>
+</html>

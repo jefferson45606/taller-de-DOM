@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con removeAttribute</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #info {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejercicio con removeAttribute</h1>
+  
+  <button id="actionButton" disabled>boton deshabilitado</button>
+  
+  <button id="enableButton">Habilitar botón</button>
+
+  <p id="info">hay que presionar el boton "habilitar boton" para que el botón aparezca.</p>
+
+  <script>
+    const actionButton = document.getElementById("actionButton");
+    const enableButton = document.getElementById("enableButton");
+    const info = document.getElementById("info");
+
+    enableButton.addEventListener("click", () => {
+    actionButton.removeAttribute("disabled");
+
+
+    info.textContent = "boton habilitado, ahora se puede interactuar con el";
+
+
+    actionButton.textContent = "el boton esta activo ahora";
+    });
+
+
+    actionButton.addEventListener("click", () => {
+    info.textContent = "que tengas un ben dia.";
+    });
+
+  </script>
+</body>
+</html>

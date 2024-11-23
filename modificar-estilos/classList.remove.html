@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo con classList.remove</title>
+  <style>
+    
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+      border: 2px solid blue;
+      margin: 20px auto;
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+
+    .highlight {
+      background-color: yellow;
+      border-color: orange;
+      color: red;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejemplo con classList.remove</h1>
+  <div id="box" class="highlight">Texto editable</div>
+  <button id="removeClassButton">Eliminar estilo resaltado</button>
+
+  <script>
+    const box = document.getElementById("box");
+    const removeClassButton = document.getElementById("removeClassButton");
+
+    removeClassButton.addEventListener("click", () => {
+    box.classList.remove("highlight"); 
+    box.textContent = "Estilo resaltado eliminado"; 
+    });
+
+  </script>
+</body>
+</html>

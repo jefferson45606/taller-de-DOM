@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con classList</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+      color: red;
+    }
+    .hidden {
+      display: none;
+    }
+    #text {
+      margin: 20px 0;
+      font-size: 18px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejemplo con classList</h1>
+
+
+  <div id="text">texto editable</div>
+
+
+  <button id="addClassButton">Agregar clase "highlight"</button>
+  <button id="removeClassButton">Eliminar clase "highlight"</button>
+  <button id="toggleClassButton">Alternar clase "hidden"</button>
+
+  <script>
+    const textElement = document.getElementById("text");
+    const addClassButton = document.getElementById("addClassButton");
+    const removeClassButton = document.getElementById("removeClassButton");
+    const toggleClassButton = document.getElementById("toggleClassButton");
+
+
+    addClassButton.addEventListener("click", () => {
+    textElement.classList.add("highlight");
+    });
+
+
+    removeClassButton.addEventListener("click", () => {
+    textElement.classList.remove("highlight");
+    });
+
+
+    toggleClassButton.addEventListener("click", () => {
+    textElement.classList.toggle("hidden");
+    });
+
+  </script>
+</body>
+</html>

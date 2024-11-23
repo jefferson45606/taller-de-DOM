@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con setAttribute</title>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      text-align: center;
+      line-height: 100px;
+      border: 2px solid #ccc;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejercicio con setAttribute</h1>
+  <div id="colorBox">Color actual: gris</div>
+  <button id="changeColorButton">Cambiar color</button>
+
+  <script>
+    const colorBox = document.getElementById("colorBox");
+    const changeColorButton = document.getElementById("changeColorButton");
+
+    changeColorButton.addEventListener("click", () => {
+    colorBox.setAttribute("style", "background-color: lightblue; color: black;");
+
+
+    colorBox.textContent = "Color actual: azul claro";
+
+    changeColorButton.setAttribute("disabled", "true");
+    changeColorButton.textContent = "Color cambiado (deshabilitado)";
+    });
+
+  </script>
+</body>
+</html>

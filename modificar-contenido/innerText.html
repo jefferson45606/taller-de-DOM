@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con innerText</title>
+  <style>
+    #message {
+      font-size: 18px;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #hiddenText {
+      display: none;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejercicio con innerText</h1>
+  <p id="message">Texto principal.</p>
+  <p id="hiddenText">Este texto está oculto.</p>
+  <button id="changeTextButton">Cambiar Texto</button>
+
+  <script>
+    const message = document.getElementById("message");
+    const hiddenText = document.getElementById("hiddenText");
+    const button = document.getElementById("changeTextButton");
+
+    button.addEventListener("click", () => {
+    message.innerText = "texto actualizado.";
+
+    hiddenText.style.display = "block";
+    hiddenText.innerText = "texto ocualto ahora visible";
+    
+    message.style.backgroundColor = "#d1f7c4"; 
+    message.style.color = "#000";             
+    message.style.fontWeight = "bold";        
+    });
+
+  </script>
+</body>
+</html>

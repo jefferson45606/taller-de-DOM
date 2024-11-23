@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con getAttribute</title>
+  <style>
+    #info {
+      font-size: 18px;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Ejercicio con getAttribute</h1>
+
+  <p id="info" data-info="un atributo personalizado'">
+    presiona el boton para ver el valor de este atributo.
+  </p>
+
+  <button id="showAttributeButton">Mostrar Atributo</button>
+  <p id="result"></p>
+
+  <script>
+    const infoElement = document.getElementById("info");
+    const showButton = document.getElementById("showAttributeButton");
+    const resultElement = document.getElementById("result");
+
+    showButton.addEventListener("click", () => {
+    const attributeValue = infoElement.getAttribute("data-info");
+
+    resultElement.textContent = `El valor del atributo 'data-info' es: "${attributeValue}"`;
+    resultElement.style.fontWeight = "bold";
+    resultElement.style.color = "#007bff"; 
+    });
+
+  </script>
+</body>
+</html>
